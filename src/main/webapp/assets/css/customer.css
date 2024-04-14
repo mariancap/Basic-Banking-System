@@ -1,0 +1,116 @@
+/* Customer Page */
+.customers{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 40.175rem;
+    margin: 1rem auto 0;
+    padding-bottom: 2rem;
+}
+
+.transfer-money{
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.transfer-money span{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+}
+
+.customer-inputs {
+    width: 80%;
+    max-width: 40rem;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 0.8rem;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    width: 50%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: medium;
+}
+
+.transfer-btn{
+    background-color: rgb(54, 54, 195);
+    color: white;
+}
+
+/* Table styling */
+table{
+    border-collapse: collapse;
+    margin-top: 2rem;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+}
+
+caption{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+thead tr{
+    background-color: #076e1a;
+}
+
+thead th{
+    color: #fff;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgba(155, 151, 151, 0.5);
+}
+
+table th,
+table td{
+    text-align: center;
+    padding: 0.8rem;
+}
+
+
+@media (min-width: 800px) {
+    .customers{
+        width: 100%;
+        max-width: 80.35rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }   
+
+    .customer-inputs{
+        width: 100%;
+    }
+
+    .impt-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn{
+        width: 50%;
+    }
+
+    .details{
+        margin-right: 2rem;
+    }
+}
