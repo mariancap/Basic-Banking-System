@@ -59,13 +59,19 @@
             </form>
             <%-- If any error during transaction--%>
             <%
-                String status = request.getParameter("status");
-                if (status != null && status.equals("success")){%>
-            <p style="color: green">Transaction was successful</p>
+                String message = (String) request.getAttribute("message");
+                if (message != null && !message.isEmpty()) {
+            %>
+            <p style="color: green;"><%= message %></p>
             <%
-            }
-            else if (status != null && status.equals("error")){%>
-            <p style="color: red">Transaction failed. Enter sender and receiver names correctly</p>
+                }
+            %>
+
+            <%
+                String error = request.getParameter("status");
+                if (error != null && error.equals("error")){
+            %>
+            <p style="color: red">Enter usernames correctly.</p>
             <%
                 }
             %>

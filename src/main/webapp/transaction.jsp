@@ -1,6 +1,8 @@
-<%@ page import="com.example.DAO.UserFunctions" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.DAO.Transaction" %>
+<%@ page import="com.example.DAO.UserFunctions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +12,7 @@
     <meta name="description" content="This project is about creating a simple banking system.">
     <title>Spark Bank | Reon Fernandes</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/customer.css">
 </head>
 
 <body>
@@ -45,14 +48,25 @@
         </tr>
         </thead>
         <tbody>
+        <%
+            // Retrieve list of transactions from session attribute
+            List<Transaction> transactions = (List<Transaction>) session.getAttribute("transactions");
+            if (transactions != null) {
+                for (Transaction transaction : transactions) {
+        %>
         <tr>
-            <td>${Sender}</td>
-            <td>${Receiver}</td>
-            <td>${Amount}</td>
+            <td><%= transaction.getSender() %></td>
+            <td><%= transaction.getReceiver() %></td>
+            <td><%= transaction.getAmount() %></td>
         </tr>
+        <%
+                }
+            }
+        %>
         </tbody>
     </table>
 </section>
-</body>
 
+<script src="assets/js/main.js"></script>
+</body>
 </html>

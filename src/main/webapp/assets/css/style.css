@@ -127,7 +127,7 @@ a {
     margin-top: 4rem;
     height: auto;
     display: grid;
-    grid-template-rows: repeat(autofit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }

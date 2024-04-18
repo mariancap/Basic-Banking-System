@@ -22,7 +22,7 @@
 <body>
 <header class="header">
     <div class="logo">
-        <a href="index.html">
+        <a href="index.jsp">
             <img src="assets/images/Bank logo.jpg" alt="bank logo">
         </a>
     </div>
@@ -53,7 +53,10 @@
                 Spark Bank's secure features and user-friendly interface enable users to effectively manage their
                 accounts from any location.
             </p>
-            <button class="read-more-btn">Read More</button>
+
+            <a href="about.html">
+                <button class="read-more-btn">Read More</button>
+            </a>
         </div>
         <div class="hero-image item">
             <img src="assets/images/images.png" alt="A bank image">
