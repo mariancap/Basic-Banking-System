@@ -1,6 +1,6 @@
 def remote=[:]
 remote.name = 'ec2-user'
-remote.host = '54.234.133.140'
+remote.host = '54.227.169.121'
 remote.allowAnyHosts = true
 
 pipeline {
